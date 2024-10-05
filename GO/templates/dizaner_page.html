@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizaner</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/css/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/css/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/css/icon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/static/css/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/static/css/course.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navigation">
+            <div class="container navigation__container">
+                <ul class="navigation_list">
+                    <li><a href="/contact/" class="navigation__button">Курсы</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="catalog">
+            <div class="catalog__wrap_list">
+                <ul class="catalog__list">
+                    <!-- Блок с изображением -->
+                    <li class="catalog__item">
+                        <article class="product">
+                            <div class="product__imagee">
+                                <img src="/static/css/img/foto3.jpg" alt="Dizaner" class="product__imagee">
+                            </div>
+                            <form action="/Dizaner/" method="post">
+                                <button class="product__add" type="submit" name="Dizaner" value="Dizaner">{{ .Name_curse }}</button>
+                            </form>
+                            <h1>Веб-дизайнер — это человек, который работает над внешним видом сайта.<br> Он выбирает, какие элементы будут представлены на странице и в каком порядке они будут отражаться на мониторах пользователей.<br> Например, он решает, что будет, если навести курсор мыши на определенный блок и в какой последовательности будет отображаться информация при прокрутке страницы вниз.<br> В отличие от дизайнера одежды или интерьера, к работе веб-дизайнера нельзя физически прикоснуться, она существует исключительно в интернет-пространстве.<br> И если дизайнер мебели должен уделять внимание тканям и материалам, из которых создается предмет, то веб-дизайнер думает о цветах, композиции и простоте использования сайта для пользователя.</h1>
+                        </article>
+                    </li>
+                    <!-- Блок с видео -->
+                                <video controls>
+                                    <source src="/static/css/video/Dizaner.mp4" type="video/mp4">
+                                    Ваш браузер не поддерживает видео.
+                                </video>
+    </main>
+    <footer class="footer">
+        <footer class="footer">
+            <div class="container footer__container">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="/" class="footer__link">Главная</a></li>
+                    <li class="footer__item"><a href="/" class="footer__link">О нас</a></li>
+                    <li class="footer__item"><a href="https://t.me/Danieluwu" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="/" class="footer__link">Политика конфиденциальности</a></li>
+                </ul>
+                <p class="footer__text">© 2024 RoboDendi. Все права защищены.</p>
+            </div>
+        </footer>   
+</body>
+
+</html>

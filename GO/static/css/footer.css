@@ -1,0 +1,55 @@
+/* Общие стили */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer {
+    background-color: #000000;
+    color: #e1dfdf;
+    padding: 100px 0;
+    margin-top: 40px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer__item {
+    margin: 0;
+}
+
+.footer__link {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__text {
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .footer__list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
