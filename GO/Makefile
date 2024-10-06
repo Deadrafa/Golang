@@ -1,7 +1,9 @@
 #---Не-Весь-Проэкт--Добавить--Если-Надо---#
 all:
 	go build -o shavel ./backend.go ./sql.go ./main.go  ./stack_message.go
-	./shavel
+	./shavel &
+	sleep 2
+	xdg-open http://localhost:8080
 
 #--Запуск--Базы--Данных---#
 db_start:
@@ -23,7 +25,23 @@ db_request:
 db_clear:
 	psql -U postgres registration < sql_request_files/clear.sql
 
+#--Билдит--Проект--в--Docker--Контейнер---#
+docker_build:
+	docker build -t shavel .
+
+#--Запускает--Собранный--Docker--Образ---#
+docker_run: 
+#	docker run -p 8080:8080 shavel
+#	sleep 2
+	docker compose up --build
+
+#--Если--Занят--Процессом---Удалит--Его---#
+server_stop:
+	sudo kill -9 6464
 
 clean:
 	rm -rf shavel
+#---ОСТОРОЖНО--УДАЛЯЕТ--ВСЕ--ОБРАЗЫ--DOCKER--#
+	docker system prune -a
+#---ОСТОРОЖНО--УДАЛЯЕТ--ВСЕ--ОБРАЗЫ--DOCKER--#
 	clear

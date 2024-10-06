@@ -4,17 +4,29 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"time"
 
 	_ "github.com/lib/pq"
 )
 
 func sql_reques() {
-	connStr := "user=postgres  dbname=registration sslmode=disable"
+	/* Убрать host=db и password=mysecretpassword Если работаешь локально с базой, эта штука нужна докеру(docker) */
+	connStr := "user=postgres  dbname=registration sslmode=disable host=db"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err)
 	}
 	defer db.Close()
+
+	for i := 0; i < 5; i++ {
+		err = db.Ping()
+		if err == nil {
+			fmt.Println("Подключение к базе данных успешно!")
+			break
+		}
+		log.Printf("Ошибка подключения к базе данных: %v. Попытка %d из %d...", err, i+1, 5)
+		time.Sleep(20 * time.Second)
+	}
 
 	err = db.Ping()
 	if err != nil {
@@ -51,7 +63,8 @@ func sql_reques() {
 }
 
 func check_user_in_db(Username string, Email string) int {
-	connStr := "user=postgres  dbname=registration sslmode=disable"
+	/* Убрать host=db и password=mysecretpassword Если работаешь локально с базой, эта штука нужна докеру(docker) */
+	connStr := "user=postgres  dbname=registration sslmode=disable host=db"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err)
@@ -83,7 +96,8 @@ func check_user_in_db(Username string, Email string) int {
 }
 
 func add_user_in_db(Username string, Email string, Password string) {
-	connStr := "user=postgres dbname=registration sslmode=disable"
+	/* Убрать host=db и password=mysecretpassword Если работаешь локально с базой, эта штука нужна докеру(docker) */
+	connStr := "user=postgres  dbname=registration sslmode=disable host=db"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatalf("Ошибка при подключении к базе данных: %v", err)
