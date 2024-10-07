@@ -149,50 +149,6 @@ body {
     background-color: #218838;
 }
 
-/* Стили для футера */
-.footer {
-    background-color: rgba(117, 100, 218, 0.8); /* Заменяем на фиолетовый с прозрачностью */
-    color: #fff; /* Цвет текста остаётся белым */
-    padding: 20px 0;
-    text-align: center;
-    margin-top: auto;
-}
-
-.footer__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer__list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer__item {
-    margin: 0 15px;
-}
-
-.footer__link {
-    color: #fff; /* Цвет ссылок остаётся белым */
-    text-decoration: none;
-    transition: color 0.3s; /* Плавный переход для эффекта при наведении */
-}
-
-.footer__link:hover {
-    color: rgba(222, 43, 235, 0.8); /* Цвет ссылки при наведении */
-    text-decoration: underline;
-}
-
-.footer__text {
-    margin-top: 10px;
-    color: rgba(255, 255, 255, 0.8); /* Лёгкая прозрачность для текста */
-}
-
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
