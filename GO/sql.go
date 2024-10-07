@@ -11,7 +11,7 @@ import (
 
 func sql_reques() {
 	/* Убрать host=db и password=mysecretpassword Если работаешь локально с базой, эта штука нужна докеру(docker) */
-	connStr := "user=postgres  dbname=registration sslmode=disable host=db"
+	connStr := "user=postgres  dbname=registration sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err)
@@ -64,7 +64,7 @@ func sql_reques() {
 
 func check_user_in_db(Username string, Email string) int {
 	/* Убрать host=db и password=mysecretpassword Если работаешь локально с базой, эта штука нужна докеру(docker) */
-	connStr := "user=postgres  dbname=registration sslmode=disable host=db"
+	connStr := "user=postgres  dbname=registration sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err)
@@ -97,7 +97,7 @@ func check_user_in_db(Username string, Email string) int {
 
 func add_user_in_db(Username string, Email string, Password string) {
 	/* Убрать host=db и password=mysecretpassword Если работаешь локально с базой, эта штука нужна докеру(docker) */
-	connStr := "user=postgres  dbname=registration sslmode=disable host=db"
+	connStr := "user=postgres  dbname=registration sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatalf("Ошибка при подключении к базе данных: %v", err)

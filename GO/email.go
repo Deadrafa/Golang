@@ -10,7 +10,7 @@ func send_to_email(Email string) {
 	smtpHost := "smtp.mail.ru"
 	smtpPort := "587"
 	smtpUsername := "ivan_test_user@mail.ru"
-	smtpPassword := "iiSmDXj7wjg8gzxg54ar"
+	smtpPassword := "ySR4VHssrfPe2jkiArGq"
 
 	from := "ivan_test_user@mail.ru"
 	to := []string{Email}

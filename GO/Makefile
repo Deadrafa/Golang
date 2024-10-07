@@ -1,6 +1,6 @@
 #---Не-Весь-Проэкт--Добавить--Если-Надо---#
 all:
-	go build -o shavel ./backend.go ./sql.go ./main.go  ./stack_message.go
+	go build -o shavel ./backend.go ./sql.go ./main.go  ./stack_message.go 
 	./shavel &
 	sleep 2
 	xdg-open http://localhost:8080
@@ -37,7 +37,7 @@ docker_run:
 
 #--Если--Занят--Процессом---Удалит--Его---#
 server_stop:
-	sudo kill -9 6464
+	lsof -i :8080
 
 clean:
 	rm -rf shavel

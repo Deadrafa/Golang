@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="/static/css/form.css">
 
 </head>
+
+<style>
+    input::placeholder {
+        color: #000000; /* Цвет текста placeholder */
+    }
+</style>
 <header class="header">
   <div class="container header_container">
       <svg width="370" height="86" viewBox="0 0 370 86" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,41 +30,60 @@
   </div>
 </header>
 
-<body>
-    <main class="container">
-        <form action="/registration/" method="post">
-            <h1>Регистрация</h1>
-            <section class="catalog">
-                <div class="catalog__wrap_list">
-                    <ul class="catalog__list">
-                        <li class="catalog__item">
-                            <article class="product">
-                                <div class="navigation__container">
-                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Полное имя" value="{{ .FullName }}" required>
-                                </div>
-                                <div class="navigation__container">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email адрес" value="{{ .Email }}" required>
-                                </div>
-                                <div class="navigation__container">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Пароль" value="{{ .Password }}" required>
-                                </div>
-                                <div class="navigation__container">
-                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" value="{{ .ConfirmPassword }}" required>
-                                </div>
-                                <div class="navigation__container">
-                                    <button class="product__add" type="submit">Зарегистрироваться</button>
-                                    {{ if .Error }}
-                                    <p class="container" style="color:red;"><b>{{ .Error }}</b></p>
-                                    {{ end }}
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
-                </div>
+<body background="/static/css/img/back.jpg" style="background-size: cover; background-repeat: no-repeat;">
+    <main class="container" >
+        <form action="/registration/" method="post" style="background-color: rgba(117, 100, 218, 0.4); border-radius: 70px;">
+            <h1 style="color: rgb(246, 166, 254); font-size: 2em">Регистрация</h1>
+            <section class="catalog" >
+                <li class="catalog__item" style="background-color: rgba(158, 133, 240, 0.5); border-radius: 70px;">
+                    <article class="product">
+                        <div class="navigation__container">
+                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Полное имя" value="{{ .FullName }}" style="background-color: #c760e0; border: 1px solid rgba(117, 100, 218, 0.3); color: white; border-radius: 20px;" required>
+                        </div>
+                        <div class="navigation__container">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email адрес" value="{{ .Email }}" style="background-color: #c760e0; border: 1px solid rgba(117, 100, 218, 0.3); color: white; border-radius: 20px;" required>
+                        </div>
+                        <div class="navigation__container">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Пароль" value="{{ .Password }}" style="background-color: #c760e0; border: 1px solid rgba(117, 100, 218, 0.3); color: white; border-radius: 20px;" required>
+                        </div>
+                        <div class="navigation__container">
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" value="{{ .ConfirmPassword }}" style="background-color: #c760e0; border: 1px solid rgba(117, 100, 218, 0.3); color: white; border-radius: 20px;" required>
+                        </div>
+                        <div class="navigation__container">
+                            <button class="product__add" type="submit" style="background-color: #8A2BE2; color: #FFFFFF;">Зарегистрироваться</button>
+                            {{ if .Error }}
+                            <p class="container" style="color:#fa4a4a;"><b>{{ .Error }}</b></p>
+                            {{ end }}
+                        </div>
+                    </article>
+                </li>                
             </section>
         </form>
     </main>
 
+
+    <style>
+        .footer {
+            background-color: rgba(117, 100, 218, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer__link {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer__link:hover {
+            color: rgba(222, 43, 235, 0.8);
+            text-decoration: underline;
+        }
+        .footer__text {
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    
   <footer class="footer">
     <footer class="footer">
         <div class="container footer__container">

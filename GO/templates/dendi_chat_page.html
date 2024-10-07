@@ -154,15 +154,6 @@
         text-align: center;
     }
 
-    /* Стили для футера */
-    .footer {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-        margin-top: auto;
-        width: 100%;
-    }
 
     .footer__container {
         display: flex;
@@ -221,7 +212,7 @@
     }
 </style>
 </head>
-<body>
+<body background="/static/css/img/back.jpg" style="background-size: cover; background-repeat: no-repeat;">
 <main class="container">
     <h1>Чат для пользователей сайта</h1>
     <section class="chat-container">
@@ -247,19 +238,35 @@
             <p class="error">{{ .Error }}</p>
             {{ end }}
         </div>
-    
-        <div class="container footer__container">
-            <div class="button-container">
-                <button class="product__add" name="connectBtn" value="connectBtn">Подключиться</button>
-                <button  class="product__add" name="disconnectBtn" value="disconnectBtn">Отключиться</button>
-            </div>
-        </div>
     </form>
     
 
     
     
 </main> 
+
+<style>
+    .footer {
+        background-color: rgba(117, 100, 218, 0.8);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: auto;
+    }
+    .footer__link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .footer__link:hover {
+        color: rgba(222, 43, 235, 0.8);
+        text-decoration: underline;
+    }
+    .footer__text {
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+</style>
+
 <footer class="footer">
     <div class="container footer__container">
         <ul class="footer__list">

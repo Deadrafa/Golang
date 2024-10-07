@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="/static/css/course.css">
 </head>
 
-<body>
+<body background="/static/css/img/back.jpg" style="background-size: cover; background-repeat: no-repeat;">
     <main>
-        <nav class="navigation">
+        <nav class="navigation" style="background-color: black;">
             <div class="container navigation__container">
                 <ul class="navigation_list">
                     <li><a href="/contact/" class="navigation__button">Курсы</a></li>
@@ -29,15 +29,15 @@
             <div class="catalog__wrap_list">
                 <ul class="catalog__list">
                     <!-- Блок с изображением -->
-                    <li class="catalog__item">
+                    <li class="catalog__item" style="background-color: rgba(117, 100, 218, 0.4); border-radius: 70px;">
                         <article class="product">
                             <div class="product__imagee">
-                                <img src="/static/css/img/foto3.jpg" alt="Dizaner" class="product__imagee">
+                                <img src="/static/css/img/foto3.jpg" alt="Dizaner" class="product__imagee" style="border-radius: 70px; width: 90%; height: auto;">
                             </div>
                             <form action="/Dizaner/" method="post">
                                 <button class="product__add" type="submit" name="Dizaner" value="Dizaner">{{ .Name_curse }}</button>
                             </form>
-                            <h1>Веб-дизайнер — это человек, который работает над внешним видом сайта.<br> Он выбирает, какие элементы будут представлены на странице и в каком порядке они будут отражаться на мониторах пользователей.<br> Например, он решает, что будет, если навести курсор мыши на определенный блок и в какой последовательности будет отображаться информация при прокрутке страницы вниз.<br> В отличие от дизайнера одежды или интерьера, к работе веб-дизайнера нельзя физически прикоснуться, она существует исключительно в интернет-пространстве.<br> И если дизайнер мебели должен уделять внимание тканям и материалам, из которых создается предмет, то веб-дизайнер думает о цветах, композиции и простоте использования сайта для пользователя.</h1>
+                            <h1 style="color: rgb(248, 169, 255);">Веб-дизайнер — это человек, который работает над внешним видом сайта.<br> Он выбирает, какие элементы будут представлены на странице и в каком порядке они будут отражаться на мониторах пользователей.<br> Например, он решает, что будет, если навести курсор мыши на определенный блок и в какой последовательности будет отображаться информация при прокрутке страницы вниз.<br> В отличие от дизайнера одежды или интерьера, к работе веб-дизайнера нельзя физически прикоснуться, она существует исключительно в интернет-пространстве.<br> И если дизайнер мебели должен уделять внимание тканям и материалам, из которых создается предмет, то веб-дизайнер думает о цветах, композиции и простоте использования сайта для пользователя.</h1>
                         </article>
                     </li>
                     <!-- Блок с видео -->
@@ -46,6 +46,29 @@
                                     Ваш браузер не поддерживает видео.
                                 </video>
     </main>
+
+    <style>
+        .footer {
+            background-color: rgba(117, 100, 218, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer__link {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer__link:hover {
+            color: rgba(222, 43, 235, 0.8);
+            text-decoration: underline;
+        }
+        .footer__text {
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    
     <footer class="footer">
         <footer class="footer">
             <div class="container footer__container">

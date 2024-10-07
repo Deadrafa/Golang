@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="/static/css/course.css">
 </head>
 
-<body>
+<body background="/static/css/img/back.jpg" style="background-size: cover; background-repeat: no-repeat;">
     <main>
-        <nav class="navigation">
+        <nav class="navigation" style="background-color: black;">
             <div class="container navigation__container">
                 <ul class="navigation_list">
                     <li><a href="/contact/" class="navigation__button">Курсы</a></li>
@@ -29,23 +29,46 @@
             <div class="catalog__wrap_list">
                 <ul class="catalog__list">
                     <!-- Блок с изображением -->
-                    <li class="catalog__item">
+                    <li class="catalog__item" style="background-color: rgba(117, 100, 218, 0.4); border-radius: 70px;">
                         <article class="product">
                             <div class="product__imagee">
-                                <img src="/static/css/img/foto5.jpg" alt="Data">
+                                <img src="/static/css/img/foto5.jpg" alt="Data" style="border-radius: 70px; width: 90%; height: auto;">
                             </div>
                             <form action="/Data/" method="post">
                                 <button class="product__add" type="submit" name="Data" value="Data">{{ .Name_curse }}</button>
                             </form>
-                            <h1>Data Scientist применяет методы науки о данных (Data Science) для больших объемов информации.<br> Он строит и тестирует математические модели поведения.<br> Это помогает найти в них закономерности или спрогнозировать будущие значения.<br> Например, по информации о спросе на товары в прошлом специалист по работе с большими данными может спрогнозировать продажи в следующем году.<br> Модели строят с помощью алгоритмов машинного обучения, а с базами данных работают через SQL.</h1>
+                            <h1 style="color: rgb(248, 169, 255);">Data Scientist применяет методы науки о данных (Data Science) для больших объемов информации.<br> Он строит и тестирует математические модели поведения.<br> Это помогает найти в них закономерности или спрогнозировать будущие значения.<br> Например, по информации о спросе на товары в прошлом специалист по работе с большими данными может спрогнозировать продажи в следующем году.<br> Модели строят с помощью алгоритмов машинного обучения, а с базами данных работают через SQL.</h1>
                         </article>
                     </li>
                     <!-- Блок с видео -->
                                 <video controls>
-                                    <source src="/static/css/video/Data.mp4" type="video/mp4">
+                                    <source src="/static/css/video/Data.mp4" type="video/mp4" style="border-radius: 70px; width: 90%; height: auto;">
                                     Ваш браузер не поддерживает видео.
                                 </video>
     </main>
+
+    <style>
+        .footer {
+            background-color: rgba(117, 100, 218, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer__link {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer__link:hover {
+            color: rgba(222, 43, 235, 0.8);
+            text-decoration: underline;
+        }
+        .footer__text {
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    
     <footer class="footer">
         <footer class="footer">
             <div class="container footer__container">
